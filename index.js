@@ -9,7 +9,7 @@ const _htmlEscape = string => string
 const _htmlUnescape = htmlString => htmlString
 	.replaceAll('&gt;', '>')
 	.replaceAll('&lt;', '<')
-	.replaceAll('&#0?39;', '\'')
+	.replace(/&#0?39;/g, '\'')
 	.replaceAll('&quot;', '"')
 	.replaceAll('&amp;', '&'); // Must happen last or else it will unescape other characters in the wrong order.
 
